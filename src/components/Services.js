@@ -6,38 +6,40 @@ export default class Services extends Component {
   state = {
     services: [
       {
-        icon:<FaCocktail/>,
+        icon: <FaCocktail />,
         title: "Free cocktails",
-        info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?'
+        info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?",
       },
       {
-        icon:<FaHiking/>,
+        icon: <FaHiking />,
         title: "Endless hiking",
-        info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?'
+        info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?",
       },
       {
-        icon:<FaShuttleVan/>,
+        icon: <FaShuttleVan />,
         title: "Free shuttle",
-        info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?'
+        info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?",
       },
       {
-        icon:<FaBeer/>,
+        icon: <FaBeer />,
         title: "Strongest Beer",
-        info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?'
-      }
-    ]
-  }
+        info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, tempora?",
+      },
+    ],
+  };
   render() {
     return (
-      <section className="services">
+      <section className='services'>
         <Title title='services' />
-        <div className="services-center">
+        <div className='services-center'>
           {this.state.services.map((item, index) => {
-            return <article key={index} className="service">
-              <span>{item.icon}</span>
-              <h6>{item.title}</h6>
-              <p>{item.info}</p>
-            </article>
+            return (
+              <article key={index} className='service'>
+                <span>{item.icon}</span>
+                <h6>{item.title}</h6>
+                <p>{item.info}</p>
+              </article>
+            );
           })}
         </div>
       </section>
