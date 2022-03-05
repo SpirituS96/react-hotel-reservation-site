@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import defaultBcg from "../images/room-11.jpeg";
 import Banner from "../components/Banner";
-import Hero from "../components/Hero";
 import { Link, useParams } from "react-router-dom";
 import { RoomContext } from "../context";
 import StyledHero from "../components/StyledHero";
@@ -15,7 +14,6 @@ const withRouter = (WrappedComponent) => (props) => {
 class SingleRoom extends Component {
   constructor(props) {
     super(props);
-    // console.log(this);
     this.state = {
       slug: this.props.params.slug,
       defaultBcg,
